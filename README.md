@@ -60,7 +60,7 @@ git clone https://github.com/dinhhoang02006/DienToanDiDong-Dinh-Van-Hoang-Th29-0
 ### 2️⃣ Di chuyển vào thư mục project
 
 ```bash
-cd online-chat-system
+cd DienToanDiDong-Dinh-Van-Hoang-Th29-06
 ```
 
 ### 3️⃣ Cài đặt dependencies

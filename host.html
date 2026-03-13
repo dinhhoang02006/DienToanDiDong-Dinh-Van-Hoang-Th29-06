@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host - Chat Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-user-type="host">
+
+    <!-- Animated Background Elements -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+    <div class="container two-column-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="back-btn" title="Trở lại trang chủ"
+                    style="margin-right: 15px; width: 35px; height: 35px;"><i class="fas fa-arrow-left"></i></a>
+                <div class="search-bar sidebar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                </div>
+            </div>
+            <div class="conversation-list">
+                <div class="conversation-item active">
+                    <div class="avatar"><i class="fas fa-user-astronaut"></i></div>
+                    <div class="conv-info">
+                        <h4>Client 01 (Người dùng)</h4>
+                        <p>Đang trò chuyện...</p>
+                    </div>
+                </div>
+                <div class="conversation-item">
+                    <div class="avatar" style="background: linear-gradient(135deg, #4caf50, #81c784);"><i
+                            class="fas fa-users"></i></div>
+                    <div class="conv-info">
+                        <h4>Phòng chờ (Lobby)</h4>
+                        <p>Hiện không có ai online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-app">
+            <header class="chat-header">
+                <div class="title-area">
+                    <h2>
+                        <div class="status-dot"></div> Host Station (Máy chủ)
+                    </h2>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-clear-chat" onclick="clearConversation()" title="Xóa & Cảnh báo mới">
+                        <i class="fas fa-trash-alt"></i> Xóa
+                    </button>
+                    <i class="fas fa-phone icon-btn"></i>
+                    <i class="fas fa-video icon-btn"></i>
+                    <i class="fas fa-ellipsis-v icon-btn" style="margin-left: 10px;"></i>
+                </div>
+            </header>
+
+            <div class="chat-messages" id="chatBox">
+                <!-- Messages will be rendered here by JS -->
+            </div>
+
+            <div class="chat-input-area">
+                <i class="fas fa-paperclip input-icon"></i>
+                <div class="input-wrapper">
+                    <textarea id="messageInput" placeholder="Nhập tin nhắn với tư cách Host..." rows="1"
+                        style="width: 100%; padding: 16px 25px 16px 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(0, 0, 0, 0.4); color: white; font-size: 1.05rem; outline: none; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); resize: none; overflow-y: auto; line-height: 1.5; max-height: 120px; font-family: 'Outfit', sans-serif;"></textarea>
+                </div>
+                <i class="far fa-smile input-icon"></i>
+                <button class="send-btn" id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Chỉnh sửa tin nhắn -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h3>Chỉnh sửa tin nhắn</h3>
+            <textarea id="editInput" rows="3"
+                style="width: 100%; padding: 15px 20px 15px 20px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 12px; margin-bottom: 30px; font-size: 1.05rem; outline: none; transition: border 0.3s; resize: none; font-family: 'Outfit', sans-serif; line-height: 1.5;"></textarea>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeEditModal()">Hủy</button>
+                <button class="btn-save" onclick="saveEdit()">Lưu thay đổi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

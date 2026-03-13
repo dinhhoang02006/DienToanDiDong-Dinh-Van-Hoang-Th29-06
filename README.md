@@ -54,7 +54,7 @@ Hệ thống giúp cải thiện trải nghiệm hỗ trợ khách hàng và tă
 ### 1️⃣ Clone repository
 
 ```bash
-git clone https://github.com/username/online-chat-system.git
+git clone https://github.com/dinhhoang02006/DienToanDiDong-Dinh-Van-Hoang-Th29-06.git
 ```
 
 ### 2️⃣ Di chuyển vào thư mục project
